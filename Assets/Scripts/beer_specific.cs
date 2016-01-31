@@ -3,7 +3,6 @@ using System.Collections;
 
 public class beer_specific : MonoBehaviour
 {
-
     private string beerType;
     private string beerColor;
     private bool filled;
@@ -16,7 +15,7 @@ public class beer_specific : MonoBehaviour
 
     void Update()
     {
-         //transform.Translate(Game_controller.getSpeedBeer() * 1 * Time.deltaTime, 0, 0);
+         transform.Translate(3 * 1 * Time.deltaTime, 0, 0);
     }
 
     public void setBeerType(string beerType)
@@ -26,6 +25,10 @@ public class beer_specific : MonoBehaviour
     public void setBeerColor(string beerColor)
     {
         this.beerColor = beerColor;
+    }
+    public void setFilled(bool filled)
+    {
+        this.filled = filled;
     }
 
 }
