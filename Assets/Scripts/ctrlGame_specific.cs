@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ctrlGameData : MonoBehaviour {
+public class ctrlGame_specific : MonoBehaviour {
 
     private int score;
     private float timer;
