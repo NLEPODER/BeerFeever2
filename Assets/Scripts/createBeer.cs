@@ -40,7 +40,8 @@ public class createBeer : MonoBehaviour {
 
     private GameObject initialisationBeer(string beerType)
     {
-        string isBeerType = "is" + beerType.ToUpper() + beerType.Substring(1);
+        string firstChar = beerType[0].ToString();
+        string isBeerType = "is" + firstChar.ToUpper() + beerType.Substring(1);
         GameObject gameObject_beer = Instantiate(beerPrefab, this.transform.position, Quaternion.identity) as GameObject;
         Animator animator;
         animator = gameObject_beer.GetComponent<Animator>();
