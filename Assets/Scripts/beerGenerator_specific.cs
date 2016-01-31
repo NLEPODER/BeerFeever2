@@ -8,21 +8,7 @@ public class beerGenerator_specific : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Transform TranformLine = this.gameObject.GetComponent(typeof(Transform)) as Transform;
-        switch (TranformLine.position.y.ToString())
-        {
-            case "-8.5":
-                beerGeneratorColor = "blonde";
-                break;
-            case "-1.1":
-                beerGeneratorColor = "brune";
-                break;
-            case "5.3":
-                beerGeneratorColor = "rousse";
-                break;
-            default:
-                break;
-        }
+
     }
 
     void Update()
@@ -32,6 +18,11 @@ public class beerGenerator_specific : MonoBehaviour
     public string getBeerGeneratorColor()
     {
         return beerGeneratorColor;
+    }
+
+    public void setBeerGeneratorColor(string beerGeneratorColor)
+    {
+        this.beerGeneratorColor = beerGeneratorColor;
     }
 
 
