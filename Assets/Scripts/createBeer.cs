@@ -7,6 +7,7 @@ public class createBeer : MonoBehaviour {
     private string beerColor;
     private float initTime;
     private float currentTime;
+    private float beerSpeed;
 
 
     // Use this for initialization
@@ -14,13 +15,14 @@ public class createBeer : MonoBehaviour {
         beerPrefab = Resources.Load("Prefabs/BeerPrefab", typeof(GameObject)) as GameObject;
         beerColor = gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor();
         initTime = Time.time;
+        beerSpeed = 1f;
 
     }
 
     // Update is called once per frame
     void Update () {
         currentTime = Time.time;
-        if (delay())
+        if (beerGeneratorIsReady())
         {
             int rand = Random.Range(0, 4);
             if (rand != 0)
@@ -55,7 +57,7 @@ public class createBeer : MonoBehaviour {
         gameObject_beer.GetComponent<beer_specific>().setBeerType(beerType);
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
-        gameObject_beer.GetComponent<beer_specific>().setSpeed(1f);
+        gameObject_beer.GetComponent<beer_specific>().setSpeed(beerSpeed);
         return gameObject_beer;
     }
 
@@ -63,7 +65,7 @@ public class createBeer : MonoBehaviour {
     {
         if (gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor().GetType() == typeof(string))
         {
-            return true;
+            return delay(); ;
         } else
         {
             Debug.Log("BeerGenerator not reday yet");
@@ -72,14 +74,16 @@ public class createBeer : MonoBehaviour {
     }
     private bool delay()
     {
-        if (!beerGeneratorIsReady())
+        float timeBetweenTwoBeer = 2f;
+        float deltaTime = currentTime - initTime;
+        if (deltaTime > timeBetweenTwoBeer) 
         {
-            Debug.Log("BeerGenerator not reday yet");
-            return false;
+            initTime = currentTime;
+            return true;
         }
         else
         {
-            return true;
+            return false;
         }
     }
 }
