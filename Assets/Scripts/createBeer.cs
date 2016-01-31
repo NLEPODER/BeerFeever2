@@ -8,7 +8,7 @@ public class createBeer : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        beerPrefab = Resources.Load("BeerPrefab", typeof(GameObject)) as GameObject;
+        beerPrefab = Resources.Load("Prefabs/BeerPrefab", typeof(GameObject)) as GameObject;
         beerColor = gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor();
     }
 	
