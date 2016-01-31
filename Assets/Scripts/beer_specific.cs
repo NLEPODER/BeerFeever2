@@ -6,6 +6,7 @@ public class beer_specific : MonoBehaviour
     private string beerType;
     private string beerColor;
     private bool filled;
+    private float speed;
 
     // Use this for initialization
     void Start()
@@ -15,9 +16,13 @@ public class beer_specific : MonoBehaviour
 
     void Update()
     {
-         transform.Translate(3 * 1 * Time.deltaTime, 0, 0);
+         transform.Translate(speed * Time.deltaTime, 0, 0);
     }
 
+    public void setSpeed(float speed)
+    {
+        this.speed = speed;
+    }
     public void setBeerType(string beerType)
     {
         this.beerType = beerType;

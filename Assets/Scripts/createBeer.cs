@@ -55,6 +55,7 @@ public class createBeer : MonoBehaviour {
         gameObject_beer.GetComponent<beer_specific>().setBeerType(beerType);
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
+        gameObject_beer.GetComponent<beer_specific>().setSpeed(1f);
         return gameObject_beer;
     }
 
