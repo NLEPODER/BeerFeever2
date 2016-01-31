@@ -5,18 +5,22 @@ public class createBeer : MonoBehaviour {
 
     private GameObject beerPrefab;
     private string beerColor;
-    private int timer;
+    private float initTime;
+    private float currentTime;
+
 
     // Use this for initialization
     void Start () {
         beerPrefab = Resources.Load("Prefabs/BeerPrefab", typeof(GameObject)) as GameObject;
         beerColor = gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor();
-        timer = 0;
+        initTime = Time.time;
+
     }
-	
-	// Update is called once per frame
-	void Update () {
-        if (beerGeneratorIsReady())
+
+    // Update is called once per frame
+    void Update () {
+        currentTime = Time.time;
+        if (delay())
         {
             int rand = Random.Range(0, 4);
             if (rand != 0)
@@ -63,6 +67,18 @@ public class createBeer : MonoBehaviour {
         {
             Debug.Log("BeerGenerator not reday yet");
             return false;
+        }
+    }
+    private bool delay()
+    {
+        if (!beerGeneratorIsReady())
+        {
+            Debug.Log("BeerGenerator not reday yet");
+            return false;
+        }
+        else
+        {
+            return true;
         }
     }
 }

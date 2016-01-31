@@ -4,6 +4,7 @@ using System.Collections;
 public class beerGenerator_specific : MonoBehaviour
 {
     private string beerGeneratorColor;
+    private float initTime;
 
     // Use this for initialization
     void Start()
