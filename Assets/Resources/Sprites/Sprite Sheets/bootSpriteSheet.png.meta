@@ -1,0 +1,225 @@
+fileFormatVersion: 2
+guid: 08d2e563587f71b4780028e296d33a72
+timeCreated: 1454059639
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: bootSpriteSheet_0
+    21300002: bootSpriteSheet_1
+    21300004: bootSpriteSheet_2
+    21300006: bootSpriteSheet_3
+    21300008: bootSpriteSheet_4
+    21300010: bootSpriteSheet_5
+    21300012: bootSpriteSheet_6
+    21300014: bootSpriteSheet_7
+    21300016: bootSpriteSheet_8
+    21300018: bootSpriteSheet_9
+    21300020: bootSpriteSheet_10
+    21300022: bootSpriteSheet_11
+    21300024: bootSpriteSheet_12
+    21300026: bootSpriteSheet_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 32
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: bootSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 78
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 25
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 25
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 25
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 25
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: bootSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 25
+        width: 27
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
