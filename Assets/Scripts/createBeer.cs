@@ -5,6 +5,7 @@ public class createBeer : MonoBehaviour {
 
     private GameObject beerPrefab;
     private string beerColor;
+    private int timer;
 
     // Use this for initialization
     void Start () {
