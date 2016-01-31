@@ -10,9 +10,9 @@ public class createBeerGenerators : MonoBehaviour
     void Start()
     {
         BeerGeneratorPrefab = Resources.Load("Prefabs/BeerGeneratorPrefab", typeof(GameObject)) as GameObject;
-        Vector3 posTop = new Vector3(0, 5.3f, 0);
-        Vector3 posMid = new Vector3(0, -1.1f, 0);
-        Vector3 posBottom = new Vector3(0, -8.5f, 0);
+        Vector3 posTop = new Vector3(-4f, 2.3f, 0);
+        Vector3 posMid = new Vector3(-4f, 0.65f, 0);
+        Vector3 posBottom = new Vector3(-4f, -1.1f, 0);
      
         instantiateBeerGenerator(posTop, "brune");
         instantiateBeerGenerator(posMid, "rousse");
