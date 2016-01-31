@@ -14,26 +14,28 @@ public class createBeer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        int rand = Random.Range(0, 4);
-        if(rand != 0)
+        if (beerGeneratorIsReady())
         {
-            GameObject gameObject_beer;
-            switch (rand)
+            int rand = Random.Range(0, 4);
+            if (rand != 0)
             {
-                case 1:
-                    gameObject_beer = initialisationBeer("demi");
-                    break;
-                case 2:
-                    gameObject_beer = initialisationBeer("pinte");
-                    break;
-                case 3:
-                    gameObject_beer = initialisationBeer("boot");
-                    break;
-                default:
-                    break;
+                GameObject gameObject_beer;
+                switch (rand)
+                {
+                    case 1:
+                        gameObject_beer = initialisationBeer("demi");
+                        break;
+                    case 2:
+                        gameObject_beer = initialisationBeer("pinte");
+                        break;
+                    case 3:
+                        gameObject_beer = initialisationBeer("boot");
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        
+        }     
     }
 
     private GameObject initialisationBeer(string beerType)
@@ -47,5 +49,17 @@ public class createBeer : MonoBehaviour {
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
         return gameObject_beer;
+    }
+
+    private bool beerGeneratorIsReady()
+    {
+        if (gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor().GetType() == typeof(string))
+        {
+            return true;
+        } else
+        {
+            Debug.Log("BeerGenerator not reday yet");
+            return false;
+        }
     }
 }
