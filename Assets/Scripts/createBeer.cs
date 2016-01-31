@@ -6,8 +6,8 @@ public class createBeer : MonoBehaviour {
     private GameObject beerPrefab;
     private string beerColor;
     private float initTime;
+    private float oldTime;
     private float currentTime;
-    private float beerSpeed;
 
 
     // Use this for initialization
@@ -15,7 +15,7 @@ public class createBeer : MonoBehaviour {
         beerPrefab = Resources.Load("Prefabs/BeerPrefab", typeof(GameObject)) as GameObject;
         beerColor = gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor();
         initTime = Time.time;
-        beerSpeed = 1f;
+        oldTime = Time.time;
 
     }
 
@@ -57,7 +57,7 @@ public class createBeer : MonoBehaviour {
         gameObject_beer.GetComponent<beer_specific>().setBeerType(beerType);
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
-        gameObject_beer.GetComponent<beer_specific>().setSpeed(beerSpeed);
+        gameObject_beer.GetComponent<beer_specific>().setSpeed(beerSpeed());
         return gameObject_beer;
     }
 
@@ -74,16 +74,31 @@ public class createBeer : MonoBehaviour {
     }
     private bool delay()
     {
-        float timeBetweenTwoBeer = 2f;
-        float deltaTime = currentTime - initTime;
-        if (deltaTime > timeBetweenTwoBeer) 
+        float deltaTime = currentTime - oldTime;
+        if (deltaTime > timeBetweenTwoBeers()) 
         {
-            initTime = currentTime;
+            oldTime = currentTime;
             return true;
         }
         else
         {
             return false;
         }
+    }
+
+    private float timeBetweenTwoBeers()
+    {
+        float coef = 2f;
+        float retour = coef / beerSpeed();
+        return retour;
+    }
+
+    private float beerSpeed()
+    {
+        float a = 0.01f;
+        float b = 2f;
+        float retour = a * (currentTime - initTime)+ b;
+        return retour;
+
     }
 }
