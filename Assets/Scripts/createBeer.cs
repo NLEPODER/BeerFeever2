@@ -11,6 +11,7 @@ public class createBeer : MonoBehaviour {
     void Start () {
         beerPrefab = Resources.Load("Prefabs/BeerPrefab", typeof(GameObject)) as GameObject;
         beerColor = gameObject.GetComponent<beerGenerator_specific>().getBeerGeneratorColor();
+        timer = 0;
     }
 	
 	// Update is called once per frame
