@@ -15,6 +15,7 @@ public class ctrlGameData : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        Debug.Log("Start of ctrlGameData is called");
         score = 0;
         currentDifficulty = 1;
         increaseDifficultyRatio = 1.1f;
