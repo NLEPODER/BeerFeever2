@@ -24,7 +24,7 @@ public class createBeerGenerators : MonoBehaviour
     {
         GameObject BeerGenerator;
         BeerGenerator = Instantiate(BeerGeneratorPrefab, pos, Quaternion.identity) as GameObject;
-        gameObject.GetComponent<beerGenerator_specific>().setBeerGeneratorColor(beerGeneratorColor);
+        BeerGenerator.GetComponent<beerGenerator_specific>().setBeerGeneratorColor(beerGeneratorColor);
     }
 
     // Update is called once per frame
