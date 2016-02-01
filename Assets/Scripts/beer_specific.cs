@@ -7,7 +7,8 @@ public class beer_specific : MonoBehaviour
     private string beerColor;
     private bool filled;
     private float speed;
-    private float enterTime;
+    private float createTime;
+    private bool isEnter;
 
     // Use this for initialization
     void Start()
@@ -44,12 +45,22 @@ public class beer_specific : MonoBehaviour
     {
         this.filled = filled;
     }
-    public void setEnterTime(float entertime)
+    public void setCreateTime(float createTime)
     {
-        this.enterTime = enterTime;
+        this.createTime = createTime;
     }
-    public float getEnterTime()
+    public float getCreateTime()
     {
-        return this.enterTime;
+        return this.createTime;
     }
+    public void setIsEnter(bool isEnter)
+    {
+        this.isEnter = isEnter;
+    }
+    public bool getIsEnter()
+    {
+        return this.isEnter;
+    }
+
+
 }
