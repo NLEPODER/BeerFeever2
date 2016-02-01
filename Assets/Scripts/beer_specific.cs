@@ -45,6 +45,10 @@ public class beer_specific : MonoBehaviour
     {
         this.filled = filled;
     }
+    public bool getFilled()
+    {
+        return this.filled;
+    }
     public void setCreateTime(float createTime)
     {
         this.createTime = createTime;
