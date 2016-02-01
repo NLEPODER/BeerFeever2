@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class timeCounter : MonoBehaviour
+public class timeCounterCollision : MonoBehaviour
 {
 
     private float _seconds;
