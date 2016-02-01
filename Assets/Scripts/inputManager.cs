@@ -14,13 +14,13 @@ public class inputManager : MonoBehaviour {
             {
                 if (!oldestBeer)
                 {
-                    if(beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
+                    if(beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()) && beer.GetComponent<beer_specific>().getIsEnter())
                     {
                         oldestBeer = beer;
                     }
                 } else
                 {
-                    if((beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime()) && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
+                    if((beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime()) && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()) && beer.GetComponent<beer_specific>().getIsEnter())
                     {
                         oldestBeer = beer;
                     }
@@ -33,6 +33,7 @@ public class inputManager : MonoBehaviour {
         }
         else
         {
+            Debug.Log("PERDU");
             //lose Game
         }
     }
