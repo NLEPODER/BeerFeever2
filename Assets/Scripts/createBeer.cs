@@ -37,7 +37,7 @@ public class createBeer : MonoBehaviour {
                         gameObject_beer = initialisationBeer("pinte");
                         break;
                     case 3:
-                        gameObject_beer = initialisationBeer("boot");
+                        gameObject_beer = initialisationBeer("botte");
                         break;
                     default:
                         break;
