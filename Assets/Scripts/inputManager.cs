@@ -12,12 +12,15 @@ public class inputManager : MonoBehaviour {
         {
             if (!beer.GetComponent<beer_specific>().getFilled())
             {
-                if (!oldestBeer && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
+                if (!oldestBeer)
                 {
-                    oldestBeer = beer;
+                    if(beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
+                    {
+                        oldestBeer = beer;
+                    }
                 } else
                 {
-                    if(beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime() && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
+                    if((beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime()) && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()))
                     {
                         oldestBeer = beer;
                     }
@@ -38,13 +41,6 @@ public class inputManager : MonoBehaviour {
     private bool beerTypeMatch(string inputType, string beerType)
     {
         bool test = String.Equals(inputType, beerType, StringComparison.Ordinal);
-        if (test)
-        {
-            Debug.Log("MATHCHING");
-        } else
-        {
-            Debug.Log(inputType + " != " + beerType);
-        }
         return test;
     }
 }
