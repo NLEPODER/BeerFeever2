@@ -12,9 +12,8 @@ public class checkCollision : MonoBehaviour {
 	
     void OnTriggerEnter2D (Collider2D Beer)
     {
-        time = this.GetComponent<timeCounterCollision>().seconds;
-        Beer.GetComponent<beer_specific>().setEnterTime(time);
-        Debug.Log(time + Beer.GetComponent<beer_specific>().getBeerType() + Beer.GetComponent<beer_specific>().getBeerColor());
+        Beer.GetComponent<beer_specific>().setIsEnter(true);
+        Debug.Log(Beer.GetComponent<beer_specific>().getIsEnter() +" "+ Beer.GetComponent<beer_specific>().getBeerType() +" "+ Beer.GetComponent<beer_specific>().getBeerColor());
     }
 
     void OnTriggerExit2D (Collider2D Beer)
