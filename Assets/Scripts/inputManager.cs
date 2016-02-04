@@ -31,7 +31,7 @@ public class inputManager : MonoBehaviour {
         if (oldestBeer)
         {
             oldestBeer.GetComponent<beer_specific>().setFilled(true);
-            oldestBeer.GetComponent<beer_specific>().animateFill();
+            oldestBeer.GetComponent<beer_specific>().animateFill(oldestBeer);
         }
         else
         {
