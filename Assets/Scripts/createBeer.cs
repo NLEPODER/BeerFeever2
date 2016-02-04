@@ -96,7 +96,7 @@ public class createBeer : MonoBehaviour {
 
     private float beerSpeed()
     {
-        float a = 0.01f;
+        float a = 0.02f;
         float b = 2f;
         float retour = a * (currentTime - initTime)+ b;
         return retour;
