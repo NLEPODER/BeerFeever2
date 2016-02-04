@@ -21,6 +21,19 @@ public class beer_specific : MonoBehaviour
          transform.Translate(speed * Time.deltaTime, 0, 0);
     }
 
+    public void animateFill (GameObject obj)
+    {
+        Animator animator;
+        animator = obj.GetComponent<Animator>();
+        animator.SetBool("is" + ToTitleCase(beerType) + ToTitleCase(beerColor), true);
+    }
+
+    private string ToTitleCase(string stringToConvert)
+    {
+        string firstChar = stringToConvert[0].ToString();
+        return (stringToConvert.Length > 0 ? firstChar.ToUpper() + stringToConvert.Substring(1) : stringToConvert);
+    }
+
     public void setSpeed(float speed)
     {
         this.speed = speed;
