@@ -8,7 +8,7 @@ public class inputManager : MonoBehaviour {
     public void clickButtonTypeBeer(string inputType)
     {
         GameObject[] beerList = GameObject.FindGameObjectsWithTag("Tag_Beer");
-        GameObject oldestBeer = null; ;
+        GameObject oldestBeer = null;
         foreach (GameObject beer in beerList)
         {
             if (!beer.GetComponent<beer_specific>().getFilled())
