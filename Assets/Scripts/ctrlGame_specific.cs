@@ -9,7 +9,6 @@ public class ctrlGame_specific : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Debug.Log("Start of ctrlGameData is called");
         score = 0;
         center = new Vector3(0, 0, 0);
     }

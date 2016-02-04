@@ -70,7 +70,6 @@ public class createBeer : MonoBehaviour {
             return delay(); ;
         } else
         {
-            Debug.Log("BeerGenerator not reday yet");
             return false;
         }
     }

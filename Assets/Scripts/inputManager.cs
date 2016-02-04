@@ -4,6 +4,7 @@ using System;
 
 public class inputManager : MonoBehaviour {
 
+
     public void clickButtonTypeBeer(string inputType)
     {
         GameObject[] beerList = GameObject.FindGameObjectsWithTag("Tag_Beer");
@@ -29,7 +30,8 @@ public class inputManager : MonoBehaviour {
         }
         if (oldestBeer)
         {
-            Destroy(oldestBeer);
+            oldestBeer.GetComponent<beer_specific>().setFilled(true);
+            oldestBeer.GetComponent<beer_specific>().animateFill();
         }
         else
         {

@@ -13,12 +13,17 @@ public class checkCollision : MonoBehaviour {
     void OnTriggerEnter2D (Collider2D Beer)
     {
         Beer.GetComponent<beer_specific>().setIsEnter(true);
-        Debug.Log(Beer.GetComponent<beer_specific>().getIsEnter() +" "+ Beer.GetComponent<beer_specific>().getBeerType() +" "+ Beer.GetComponent<beer_specific>().getBeerColor());
     }
 
     void OnTriggerExit2D (Collider2D Beer)
     {
-        Destroy(Beer.gameObject);
+        if (Beer.GetComponent<beer_specific>().getFilled())
+        {
+            Destroy(Beer.gameObject);
+        } else
+        {
+            Debug.Log("Perdu");
+        }
     }
 
     // Update is called once per frame
