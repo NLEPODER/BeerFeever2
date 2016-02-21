@@ -42,6 +42,7 @@ public class ctrlGame_specific : MonoBehaviour {
     public static void loseGame()
     {
         Debug.Log("Perdu ! Score Final : " + score);
+        PlayerPrefs.SetInt("Score", score);
         SceneManager.LoadScene("sMenu");
     }
 }
