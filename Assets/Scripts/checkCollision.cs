@@ -23,7 +23,7 @@ public class checkCollision : MonoBehaviour {
         } else
         {
             Destroy(Beer.gameObject);
-            Debug.Log("Perdu");
+            ctrlGame_specific.loseGame();
         }
     }
 

@@ -32,11 +32,13 @@ public class inputManager : MonoBehaviour {
         {
             oldestBeer.GetComponent<beer_specific>().setFilled(true);
             oldestBeer.GetComponent<beer_specific>().animateFill(oldestBeer);
+            ctrlGame_specific.incrementScore();
+
         }
         else
         {
-            Debug.Log("PERDU");
-            //lose Game
+            ctrlGame_specific.loseGame();
+
         }
     }
 

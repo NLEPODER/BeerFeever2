@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ctrlGame_specific : MonoBehaviour {
 
-    private int score;
+    private static int score;
     private Vector3 center;
 
 
@@ -17,4 +17,20 @@ public class ctrlGame_specific : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public static void incrementScore()
+    {
+        score++;
+        Debug.Log("Score : " + score);
+    }
+
+    private static int getScore()
+    {
+        return score;
+    }
+
+    public static void loseGame()
+    {
+        Debug.Log("Perdu ! Score Final : " + score);
+    }
 }
