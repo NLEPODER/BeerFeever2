@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class ctrlGame_specific : MonoBehaviour {
 
@@ -32,5 +33,6 @@ public class ctrlGame_specific : MonoBehaviour {
     public static void loseGame()
     {
         Debug.Log("Perdu ! Score Final : " + score);
+        SceneManager.LoadScene("sMenu");
     }
 }
