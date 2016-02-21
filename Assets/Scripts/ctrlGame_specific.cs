@@ -12,17 +12,22 @@ public class ctrlGame_specific : MonoBehaviour {
     void Start () {
         score = 0;
         center = new Vector3(0, 0, 0);
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(Screen.width / 2-50, 25, 100, 50), "Score : "+score.ToString());
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 
     public static void incrementScore()
     {
         score++;
-        Debug.Log("Score : " + score);
     }
 
     private static int getScore()
