@@ -18,13 +18,13 @@ public class ctrlGame_specific : MonoBehaviour {
     // Affichage du nouveau score
     void UpdateScore ()
     {
-        tScore = GameObject.Find("Text").GetComponent<Text>();
-        tScore.text = "Score :" +score;
+        tScore = GameObject.Find("Score").GetComponent<Text>();
+        tScore.text = "Score : " +score;
     }
 
     // Update is called once per frame
     void Update () {
-	
+        UpdateScore();
 	}
 
     public static void incrementScore()
