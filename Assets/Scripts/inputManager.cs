@@ -3,8 +3,7 @@ using System.Collections;
 using System;
 
 public class inputManager : MonoBehaviour {
-
-
+    
     public void clickButtonTypeBeer(string inputType)
     {
         GameObject[] beerList = GameObject.FindGameObjectsWithTag("Tag_Beer");
