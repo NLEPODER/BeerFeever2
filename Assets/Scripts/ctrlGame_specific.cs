@@ -1,31 +1,30 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ctrlGame_specific : MonoBehaviour {
 
     private static int score;
-    private Vector3 center;
-    private GUIStyle guiStyle = new GUIStyle(); 
-
-
+    public Text tScore;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         score = 0;
-        center = new Vector3(0, 0, 0);
-        guiStyle.fontSize = 40; //change the font size
-        guiStyle.normal.textColor = Color.yellow;
-
+        UpdateScore();
     }
 
-    void OnGUI()
+    // Affichage du nouveau score
+    void UpdateScore ()
     {
-        GUI.Label(new Rect(Screen.width / 2-100, 25, 100, 50), "Score : "+score.ToString(), guiStyle);
+        tScore = GameObject.Find("Score").GetComponent<Text>();
+        tScore.text = "Score : " +score;
     }
 
     // Update is called once per frame
     void Update () {
+        UpdateScore();
 	}
 
     public static void incrementScore()
