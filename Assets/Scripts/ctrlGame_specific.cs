@@ -26,7 +26,6 @@ public class ctrlGame_specific : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-	
 	}
 
     public static void incrementScore()
