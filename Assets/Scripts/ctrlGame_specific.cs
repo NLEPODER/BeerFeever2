@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class ctrlGame_specific : MonoBehaviour {
 
     private static int score;
+    public static int highScore=0;
+    string highScoreKey = "HighScore";
     public Text tScore;
+    public Text tHighsScore;
 
     // Use this for initialization
     void Start ()
     {
         score = 0;
+        highScore = PlayerPrefs.GetInt(highScoreKey, 88);
         UpdateScore();
     }
 
@@ -20,6 +24,8 @@ public class ctrlGame_specific : MonoBehaviour {
     {
         tScore = GameObject.Find("Score").GetComponent<Text>();
         tScore.text = "Score : " +score;
+        tScore = GameObject.Find("HighScore").GetComponent<Text>();
+        tScore.text = "Highscore : " + highScore;
     }
 
     // Update is called once per frame

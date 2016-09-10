@@ -9,6 +9,7 @@ public class beer_specific : MonoBehaviour
     private float speed;
     private float createTime;
     private bool isEnter;
+    public AudioSource fillBeer;
 
     // Use this for initialization
     void Start()
@@ -26,6 +27,7 @@ public class beer_specific : MonoBehaviour
         Animator animator;
         animator = obj.GetComponent<Animator>();
         animator.SetBool("is" + ToTitleCase(beerType) + ToTitleCase(beerColor), true);
+        fillBeer.Play();        
     }
 
     private string ToTitleCase(string stringToConvert)
