@@ -24,8 +24,8 @@ public class createBeer : MonoBehaviour {
         currentTime = Time.time;
         if (beerGeneratorIsReady())
         {
-            int rand = Random.Range(0, 4);
-            if (rand != 0)
+            int rand = Random.Range(0, 5);
+            if (rand != 0 && rand !=5)
             {
                 GameObject gameObject_beer;
                 switch (rand)
@@ -96,7 +96,7 @@ public class createBeer : MonoBehaviour {
 
     private float beerSpeed()
     {
-        float a = 0.02f;
+        float a = 0.01f;
         float b = 2f;
         float retour = a * (currentTime - initTime)+ b;
         return retour;
