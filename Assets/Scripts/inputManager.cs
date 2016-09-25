@@ -36,16 +36,15 @@ public class inputManager : MonoBehaviour {
             oldestBeer.GetComponent<beer_specific>().animateFill(oldestBeer);
             if(lastBeer != null)
             {
-                if (String.Compare(lastBeer.GetComponent<beer_specific>().getBeerType(), oldestBeer.GetComponent<beer_specific>().getBeerType()) != 0)
+                if (String.Compare(lastBeer.GetComponent<beer_specific>().getBeerType(), oldestBeer.GetComponent<beer_specific>().getBeerType()) == 0)
                 {
-                    Debug.Log("SAME BEER");
                     this.coef = this.coef + 1 * (int)Math.Ceiling(oldestBeer.GetComponent<beer_specific>().getSpeed() * 10);
                     this.lastBeer = oldestBeer;
                     Debug.Log(this.coef);
                 }
                 else
                 {
-                    Debug.Log("Not same beer");
+                    Debug.Log(String.Compare(lastBeer.GetComponent<beer_specific>().getBeerType(), oldestBeer.GetComponent<beer_specific>().getBeerType()));
                     Debug.Log(lastBeer.GetComponent<beer_specific>().getBeerType());
                     Debug.Log(oldestBeer.GetComponent<beer_specific>().getBeerType());
                     this.coef = 1;
@@ -54,8 +53,6 @@ public class inputManager : MonoBehaviour {
             }
             else
             {
-                Debug.Log("lastBeer is null");
-
                 this.lastBeer = oldestBeer;
             }
 
