@@ -53,4 +53,5 @@ public class ctrlGame_specific : MonoBehaviour {
         PlayerPrefs.SetInt("HighScore", highScore);
         SceneManager.LoadScene("sMenu");
     }
+
 }

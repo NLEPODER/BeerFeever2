@@ -13,6 +13,5 @@ public class displayMenu : MonoBehaviour {
     {
         mScore.text = "Last Score : " + PlayerPrefs.GetInt("Score");
         mHighScore.text = "Highscore : " + PlayerPrefs.GetInt("HighScore");
-        Debug.Log("text = " +mScore.text);
     }
 }
