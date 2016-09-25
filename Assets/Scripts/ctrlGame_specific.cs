@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class ctrlGame_specific : MonoBehaviour {
 
     private static int score;
-    public static int highScore=0;
-    string highScoreKey = "HighScore";
+    public static int highScore;
     public Text tScore;
     public Text tHighsScore;
 
@@ -15,7 +14,7 @@ public class ctrlGame_specific : MonoBehaviour {
     void Start ()
     {
         score = 0;
-        highScore = PlayerPrefs.GetInt(highScoreKey, 88);
+        highScore = PlayerPrefs.GetInt("HighScore");
         UpdateScore();
     }
 
@@ -36,6 +35,10 @@ public class ctrlGame_specific : MonoBehaviour {
     public static void incrementScore()
     {
         score++;
+        if (score > highScore)
+        {
+            highScore = score;
+        }
     }
 
     private static int getScore()
@@ -47,6 +50,7 @@ public class ctrlGame_specific : MonoBehaviour {
     {
         Debug.Log("Perdu ! Score Final : " + score);
         PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.SetInt("HighScore", highScore);
         SceneManager.LoadScene("sMenu");
     }
 }
