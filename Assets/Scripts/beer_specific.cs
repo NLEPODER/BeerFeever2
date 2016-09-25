@@ -40,6 +40,10 @@ public class beer_specific : MonoBehaviour
     {
         this.speed = speed;
     }
+    public float getSpeed()
+    {
+        return speed;
+    }
     public void setBeerType(string beerType)
     {
         this.beerType = beerType;

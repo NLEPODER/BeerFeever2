@@ -32,9 +32,9 @@ public class ctrlGame_specific : MonoBehaviour {
         UpdateScore();
 	}
 
-    public static void incrementScore()
+    public static void incrementScore(int coef)
     {
-        score++;
+        score += coef;
         if (score > highScore)
         {
             highScore = score;

@@ -105,7 +105,7 @@ public class createBeer : MonoBehaviour {
             retour =  1;
         }        else        {
 
-            float a = 0.020f;
+            float a = 0.010f;
             float b = 1;
             retour = a * (x ) + b;
 

@@ -11,7 +11,21 @@ public class displayMenu : MonoBehaviour {
 
     void Update()
     {
-        mScore.text = "Last Score : " + PlayerPrefs.GetInt("Score");
-        mHighScore.text = "Highscore : " + PlayerPrefs.GetInt("HighScore");
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            mScore.text = "Last Score : " + PlayerPrefs.GetInt("Score");
+        }
+        else
+        {
+            mScore.text = "Last Score : 0" ;
+        }
+        if(PlayerPrefs.HasKey("HighScore"))
+        {
+            mHighScore.text = "Highscore : " + PlayerPrefs.GetInt("HighScore");
+
+        } else
+        {
+            mHighScore.text = "Highscore : 0";
+        }
     }
 }
