@@ -38,7 +38,7 @@ public class inputManager : MonoBehaviour {
             {
                 if (String.Compare(lastBeer.GetComponent<beer_specific>().getBeerType(), oldestBeer.GetComponent<beer_specific>().getBeerType()) == 0)
                 {
-                    this.coef = (this.coef + 1) * (int)Math.Ceiling(oldestBeer.GetComponent<beer_specific>().getSpeed() * 2);
+                    this.coef = (this.coef) * (int)Math.Ceiling(oldestBeer.GetComponent<beer_specific>().getSpeed());
                     this.lastBeer = oldestBeer;
                 }
                 else
