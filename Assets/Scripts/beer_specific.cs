@@ -4,6 +4,7 @@ using System.Collections;
 public class beer_specific : MonoBehaviour
 {
     private string beerType;
+    private bool combosInProgress;
     private string beerColor;
     private bool filled;
     private float speed;
@@ -28,6 +29,11 @@ public class beer_specific : MonoBehaviour
         animator = obj.GetComponent<Animator>();
         animator.SetBool("is" + ToTitleCase(beerType) + ToTitleCase(beerColor), true);
         fillBeer.Play();        
+    }
+
+    public void setCombosInProgress(bool b)
+    {
+        this.combosInProgress = b;
     }
 
     private string ToTitleCase(string stringToConvert)

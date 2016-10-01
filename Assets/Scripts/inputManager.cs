@@ -52,6 +52,8 @@ public class inputManager : MonoBehaviour {
                 this.lastBeer = oldestBeer;
             }
 
+            this.combosAnimation(this.lastBeer, beerList);
+
             ctrlGame_specific.incrementScore(this.coef);
 
         }
@@ -59,6 +61,16 @@ public class inputManager : MonoBehaviour {
         {
             ctrlGame_specific.loseGame();
 
+        }
+    }
+
+    private void combosAnimation(GameObject lastBeer, GameObject[] beerList)
+    {
+        foreach (GameObject beer in beerList)
+        {
+            // set combot animation
+            bool b = String.Compare(lastBeer.GetComponent<beer_specific>().getBeerType(), beer.GetComponent<beer_specific>().getBeerType()) == 0;
+            beer.GetComponent<beer_specific>().setCombosInProgress(b);
         }
     }
 
