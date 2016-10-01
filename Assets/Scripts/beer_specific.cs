@@ -12,6 +12,8 @@ public class beer_specific : MonoBehaviour
     private bool isEnter;
     public AudioSource fillBeer;
 
+    Get
+
     // Use this for initialization
     void Start()
     {
@@ -20,7 +22,9 @@ public class beer_specific : MonoBehaviour
 
     void Update()
     {
-         transform.Translate(speed * Time.deltaTime, 0, 0);
+        transform.Translate(speed * Time.deltaTime, 0, 0);
+        if (prout == true)
+            this.GetRen
     }
 
     public void animateFill (GameObject obj)
