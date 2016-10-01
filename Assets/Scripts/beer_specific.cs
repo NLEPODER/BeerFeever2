@@ -12,28 +12,37 @@ public class beer_specific : MonoBehaviour
     private float createTime;
     private bool isEnter;
     public AudioSource fillBeer;
-    private SpriteRenderer renderer;
+    public GameObject halo;
+    private Color color_1;
 
     // Use this for initialization
     void Start()
     {
+
+        color_1 = new Color32(255, 225, 0, 255);
     }
 
     void Update()
     {
         transform.Translate(speed * Time.deltaTime, 0, 0);
-        if (this.combosInProgress == true)
+        if (this.combosInProgress)
         {
-            this.GetComponent<SpriteRenderer>().color = new Color(255f, 200f, 0f, 255f);
-        }
+            this.changeHalo(.5f, color_1);
+         }
         else
         {
-            this.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+            this.changeHalo(0.0f, color_1);
         }
         if(this.isEnter && this.filled == false)
         {
             this.GetComponent<SpriteRenderer>().color = new Color(255f, 0, 0, 255f);
         }
+    }
+
+    public void changeHalo(float intensity,  Color color)
+    {
+        halo.GetComponent<Light>().color = color;
+        halo.GetComponent<Light>().intensity = intensity;
     }
 
     public void animateFill (GameObject obj)
