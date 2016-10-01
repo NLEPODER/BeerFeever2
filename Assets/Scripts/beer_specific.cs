@@ -14,12 +14,14 @@ public class beer_specific : MonoBehaviour
     public AudioSource fillBeer;
     public GameObject halo;
     private Color color_1;
+    private Color color_red;
 
     // Use this for initialization
     void Start()
     {
 
         color_1 = new Color32(255, 225, 0, 255);
+        color_red = new Color32(255, 0, 0, 255);
     }
 
     void Update()
@@ -35,7 +37,7 @@ public class beer_specific : MonoBehaviour
         }
         if(this.isEnter && this.filled == false)
         {
-            this.GetComponent<SpriteRenderer>().color = new Color(255f, 0, 0, 255f);
+            this.changeHalo(.5f, color_red);
         }
     }
 
