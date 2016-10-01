@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+using System;
 
 public class createBeer : MonoBehaviour {
 
@@ -24,7 +25,7 @@ public class createBeer : MonoBehaviour {
         currentTime = Time.time;
         if (beerGeneratorIsReady())
         {
-            int rand = Random.Range(0, 4);
+            int rand = UnityEngine.Random.Range(0, 4);
             if (rand != 0 && rand !=4)
             {
                 GameObject gameObject_beer;
@@ -60,6 +61,13 @@ public class createBeer : MonoBehaviour {
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
         gameObject_beer.GetComponent<beer_specific>().setSpeed(beerSpeed());
+        GameObject lastBeer = ctrlGame_specific.getLastBeer();
+        if (lastBeer)
+        {
+            bool b = String.Compare(gameObject_beer.GetComponent<beer_specific>().getBeerType(), lastBeer.GetComponent<beer_specific>().getBeerType()) == 0;
+            gameObject_beer.GetComponent<beer_specific>().setCombosInProgress(b);
+
+        }
         return gameObject_beer;
     }
 
