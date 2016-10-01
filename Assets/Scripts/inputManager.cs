@@ -17,13 +17,13 @@ public class inputManager : MonoBehaviour {
             {
                 if (!oldestBeer)
                 {
-                    if(beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()) && beer.GetComponent<beer_specific>().getIsEnter())
+                    if(beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType())/* && beer.GetComponent<beer_specific>().getIsEnter()*/)
                     {
                         oldestBeer = beer;
                     }
                 } else
                 {
-                    if((beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime()) && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType()) && beer.GetComponent<beer_specific>().getIsEnter())
+                    if((beer.GetComponent<beer_specific>().getCreateTime() < oldestBeer.GetComponent<beer_specific>().getCreateTime()) && beerTypeMatch(inputType, beer.GetComponent<beer_specific>().getBeerType())/* && beer.GetComponent<beer_specific>().getIsEnter()*/)
                     {
                         oldestBeer = beer;
                     }

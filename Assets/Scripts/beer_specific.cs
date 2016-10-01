@@ -7,6 +7,7 @@ public class beer_specific : MonoBehaviour
     private bool combosInProgress;
     private string beerColor;
     private bool filled;
+    private float createdAt;
     private float speed;
     private float createTime;
     private bool isEnter;
@@ -28,6 +29,10 @@ public class beer_specific : MonoBehaviour
         else
         {
             this.GetComponent<SpriteRenderer>().color = new Color(255f, 255f, 255f, 255f);
+        }
+        if(this.isEnter && this.filled == false)
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(255f, 0, 0, 255f);
         }
     }
 
@@ -61,6 +66,10 @@ public class beer_specific : MonoBehaviour
     public void setBeerType(string beerType)
     {
         this.beerType = beerType;
+    }
+    public void setCreatedAt(float time)
+    {
+        this.createdAt = time;
     }
     public string getBeerType()
     {

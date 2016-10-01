@@ -56,11 +56,12 @@ public class createBeer : MonoBehaviour {
         animator = gameObject_beer.GetComponent<Animator>();
         animator.SetBool(isBeerType, true);
         gameObject_beer.GetComponent<beer_specific>().setBeerType(beerType);
-        gameObject_beer.GetComponent<beer_specific>().setIsEnter(true);
+        gameObject_beer.GetComponent<beer_specific>().setIsEnter(false);
         gameObject_beer.GetComponent<beer_specific>().setCreateTime(currentTime);
         gameObject_beer.GetComponent<beer_specific>().setBeerColor(beerColor);
         gameObject_beer.GetComponent<beer_specific>().setFilled(false);
         gameObject_beer.GetComponent<beer_specific>().setSpeed(beerSpeed());
+        gameObject_beer.GetComponent<beer_specific>().setCreatedAt(Time.time);
         GameObject lastBeer = ctrlGame_specific.getLastBeer();
         if (lastBeer)
         {
