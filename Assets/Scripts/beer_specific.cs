@@ -37,7 +37,11 @@ public class beer_specific : MonoBehaviour
         }
         if(this.isEnter && this.filled == false)
         {
-            this.changeHalo(.5f, color_red);
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 1);
+            //this.changeHalo(.5f, color_red);
+        } else if(isEnter && this.filled)
+        {
+            this.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         }
     }
 
